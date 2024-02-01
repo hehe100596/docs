@@ -1,0 +1,308 @@
+openapi: 3.1.0
+info:
+  title: Virtual Accounts
+  version: 3.18.3
+servers:
+- url: https://api.tatum.io
+paths:
+  /v3/ledger/account:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_post.yml
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_get.yml
+  /v3/ledger/account/count:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_count_get.yml
+  /v3/ledger/account/batch:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_batch_post.yml
+  /v3/ledger/account/customer/{id}:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_customer_{id}_get.yml
+  /v3/ledger/account/{id}:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_{id}_get.yml
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_{id}_put.yml
+  /v3/ledger/account/{id}/balance:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_{id}_balance_get.yml
+  /v3/ledger/account/block/{id}:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_block_{id}_post.yml
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_block_{id}_put.yml
+    delete:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_block_{id}_delete.yml
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_block_{id}_get.yml
+  /v3/ledger/account/block/{id}/detail:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_block_{id}_detail_get.yml
+  /v3/ledger/account/block/account/{id}:
+    delete:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_block_account_{id}_delete.yml
+  /v3/ledger/account/{id}/activate:
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_{id}_activate_put.yml
+  /v3/ledger/account/{id}/deactivate:
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_{id}_deactivate_put.yml
+  /v3/ledger/account/{id}/freeze:
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_{id}_freeze_put.yml
+  /v3/ledger/account/{id}/unfreeze:
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_account_{id}_unfreeze_put.yml
+  /v3/ledger/transaction:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_ledger_transaction_post.yml
+  /v3/ledger/transaction/batch:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_ledger_transaction_batch_post.yml
+  /v3/ledger/transaction/account:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_ledger_transaction_account_post.yml
+  /v3/ledger/transaction/customer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_ledger_transaction_customer_post.yml
+  /v3/ledger/transaction/ledger:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_ledger_transaction_ledger_post.yml
+  /v3/ledger/transaction/reference/{reference}:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_transaction_reference_{reference}_get.yml
+  /v3/ledger/deposits:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_deposits_get.yml
+  /v3/ledger/deposits/count:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_deposits_count_get.yml
+  /v3/ledger/customer:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_customer_get.yml
+  /v3/ledger/customer/{id}:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_customer_{id}_get.yml
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_customer_{id}_put.yml
+  /v3/ledger/customer/{id}/activate:
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_customer_{id}_activate_put.yml
+  /v3/ledger/customer/{id}/deactivate:
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_customer_{id}_deactivate_put.yml
+  /v3/ledger/customer/{id}/enable:
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_customer_{id}_enable_put.yml
+  /v3/ledger/customer/{id}/disable:
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_customer_{id}_disable_put.yml
+  /v3/ledger/virtualCurrency:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_ledger_virtualCurrency_post.yml
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_virtualCurrency_put.yml
+  /v3/ledger/virtualCurrency/{name}:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_ledger_virtualCurrency_{name}_get.yml
+  /v3/ledger/virtualCurrency/mint:
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_virtualCurrency_mint_put.yml
+  /v3/ledger/virtualCurrency/revoke:
+    put:
+      $ref: categories/virtual_accounts/paths/v3_ledger_virtualCurrency_revoke_put.yml
+  /v3/trade:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_trade_post.yml
+  /v3/trade/chart:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_trade_chart_post.yml
+  /v3/trade/history:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_trade_history_get.yml
+    post:
+      $ref: categories/virtual_accounts/paths/v3_trade_history_post.yml
+  /v3/trade/buy:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_trade_buy_get.yml
+    post:
+      $ref: categories/virtual_accounts/paths/v3_trade_buy_post.yml
+  /v3/trade/sell:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_trade_sell_get.yml
+    post:
+      $ref: categories/virtual_accounts/paths/v3_trade_sell_post.yml
+  /v3/trade/matched:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_trade_matched_post.yml
+  /v3/trade/{id}:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_trade_{id}_get.yml
+    delete:
+      $ref: categories/virtual_accounts/paths/v3_trade_{id}_delete.yml
+  /v3/trade/account/{id}:
+    delete:
+      $ref: categories/virtual_accounts/paths/v3_trade_account_{id}_delete.yml
+  /v3/offchain/account/{id}/address:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_account_{id}_address_post.yml
+    get:
+      $ref: categories/virtual_accounts/paths/v3_offchain_account_{id}_address_get.yml
+  /v3/offchain/account/address/batch:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_account_address_batch_post.yml
+  /v3/offchain/account/address/{address}/{currency}:
+    get:
+      $ref: categories/virtual_accounts/paths/v3_offchain_account_address_{address}_{currency}_get.yml
+  /v3/offchain/account/{id}/address/{address}:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_account_{id}_address_{address}_post.yml
+    delete:
+      $ref: categories/virtual_accounts/paths/v3_offchain_account_{id}_address_{address}_delete.yml
+  /v3/offchain/withdrawal:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_withdrawal_post.yml
+    get:
+      $ref: categories/virtual_accounts/paths/v3_offchain_withdrawal_get.yml
+  /v3/offchain/withdrawal/{id}/{txId}:
+    put:
+      $ref: categories/virtual_accounts/paths/v3_offchain_withdrawal_{id}_{txId}_put.yml
+  /v3/offchain/withdrawal/{id}:
+    delete:
+      $ref: categories/virtual_accounts/paths/v3_offchain_withdrawal_{id}_delete.yml
+  /v3/offchain/withdrawal/broadcast:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_withdrawal_broadcast_post.yml
+  /v3/offchain/bitcoin/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_bitcoin_transfer_post.yml
+  /v3/offchain/bcash/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_bcash_transfer_post.yml
+  /v3/offchain/litecoin/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_litecoin_transfer_post.yml
+  /v3/offchain/flow/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_flow_transfer_post.yml
+  /v3/offchain/dogecoin/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_dogecoin_transfer_post.yml
+  /v3/offchain/ethereum/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_ethereum_transfer_post.yml
+  /v3/offchain/polygon/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_polygon_transfer_post.yml
+  /v3/offchain/kcs/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_kcs_transfer_post.yml
+  /v3/offchain/ethereum/erc20/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_ethereum_erc20_transfer_post.yml
+  /v3/offchain/ethereum/erc20:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_ethereum_erc20_post.yml
+  /v3/offchain/ethereum/erc20/deploy:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_ethereum_erc20_deploy_post.yml
+  /v3/offchain/bsc/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_bsc_transfer_post.yml
+  /v3/offchain/bsc/bep20:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_bsc_bep20_post.yml
+  /v3/offchain/bsc/bep20/deploy:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_bsc_bep20_deploy_post.yml
+  /v3/offchain/klaytn/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_klaytn_transfer_post.yml
+  /v3/offchain/klaytn/erc20/deploy:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_klaytn_erc20_deploy_post.yml
+  /v3/offchain/xdc/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_xdc_transfer_post.yml
+  /v3/offchain/xdc/erc20:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_xdc_erc20_post.yml
+  /v3/offchain/xdc/erc20/deploy:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_xdc_erc20_deploy_post.yml
+  /v3/offchain/one/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_one_transfer_post.yml
+  /v3/offchain/one/hrm20:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_one_hrm20_post.yml
+  /v3/offchain/one/hrm20/deploy:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_one_hrm20_deploy_post.yml
+  /v3/offchain/token/{chain}:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_token_{chain}_post.yml
+  /v3/offchain/token/{name}/{address}:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_token_{name}_{address}_post.yml
+  /v3/offchain/celo/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_celo_transfer_post.yml
+  /v3/offchain/celo/erc20:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_celo_erc20_post.yml
+  /v3/offchain/celo/erc20/deploy:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_celo_erc20_deploy_post.yml
+  /v3/offchain/kcs/erc20/deploy:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_kcs_erc20_deploy_post.yml
+  /v3/offchain/celo/erc20/{name}/{address}:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_celo_erc20_{name}_{address}_post.yml
+  /v3/offchain/solana/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_solana_transfer_post.yml
+  /v3/offchain/xlm/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_xlm_transfer_post.yml
+  /v3/offchain/xlm/asset:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_xlm_asset_post.yml
+  /v3/offchain/xrp/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_xrp_transfer_post.yml
+  /v3/offchain/xrp/asset:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_xrp_asset_post.yml
+  /v3/offchain/bnb/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_bnb_transfer_post.yml
+  /v3/offchain/bnb/asset:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_bnb_asset_post.yml
+  /v3/offchain/ada/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_ada_transfer_post.yml
+  /v3/offchain/tron/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_tron_transfer_post.yml
+  /v3/offchain/tron/trc:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_tron_trc_post.yml
+  /v3/offchain/tron/trc/deploy:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_tron_trc_deploy_post.yml
+  /v3/offchain/tron/trc/{name}/{address}:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_tron_trc_{name}_{address}_post.yml
+  /v3/offchain/egld/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_egld_transfer_post.yml
+  /v3/offchain/algo/erc20/deploy:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_algo_erc20_deploy_post.yml
+  /v3/offchain/algorand/transfer:
+    post:
+      $ref: categories/virtual_accounts/paths/v3_offchain_algorand_transfer_post.yml

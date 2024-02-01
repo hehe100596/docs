@@ -17,9 +17,72 @@ jobs:
       - name: Check out repo 📚
         uses: actions/checkout@v3
 
+      - name: Blockchain Node RPC
+        env:
+          README_API_KEY: ${{ secrets.README_API_KEY }}
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi categories/blockchain_node_rpc/openapi.yml --key=${{ secrets.README_API_KEY }} --id=65bbae9e0946e900420db202
+
       - name: Blockchain Data
         env:
           README_API_KEY: ${{ secrets.README_API_KEY }}
         uses: readmeio/rdme@v8
         with:
           rdme: openapi categories/blockchain_data/openapi.yml --key=${{ secrets.README_API_KEY }} --id=65ba4604c69c9e00389ff204
+
+      - name: Subscriptions
+        env:
+          README_API_KEY: ${{ secrets.README_API_KEY }}
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi categories/subscriptions/openapi.yml --key=${{ secrets.README_API_KEY }} --id=65bbaff2337e6f006239cc8e
+
+      - name: Fee Estimation
+        env:
+          README_API_KEY: ${{ secrets.README_API_KEY }}
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi categories/fee_estimation/openapi.yml --key=${{ secrets.README_API_KEY }} --id=65bbaee4e1fece0077c36e31
+
+      - name: Smart Contracts
+        env:
+          README_API_KEY: ${{ secrets.README_API_KEY }}
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi categories/smart_contracts/openapi.yml --key=${{ secrets.README_API_KEY }} --id=65bbaf52756935005acc8211
+
+      - name: Security
+        env:
+          README_API_KEY: ${{ secrets.README_API_KEY }}
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi categories/security/openapi.yml --key=${{ secrets.README_API_KEY }} --id=65bbaf1f064d7c001672be5e
+
+      - name: Storage
+        env:
+          README_API_KEY: ${{ secrets.README_API_KEY }}
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi categories/storage/openapi.yml --key=${{ secrets.README_API_KEY }} --id=65bbafbf337e6f006239cc69
+
+      - name: Virtual Accounts
+        env:
+          README_API_KEY: ${{ secrets.README_API_KEY }}
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi categories/virtual_accounts/openapi.yml --key=${{ secrets.README_API_KEY }} --id=65bbb04cdae7740054671b18
+
+      - name: Blockchain
+        env:
+          README_API_KEY: ${{ secrets.README_API_KEY }}
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi categories/blockchain/openapi.yml --key=${{ secrets.README_API_KEY }} --id=65bbadb8dd9b8b003a21712c
+
+      - name: Utils
+        env:
+          README_API_KEY: ${{ secrets.README_API_KEY }}
+        uses: readmeio/rdme@v8
+        with:
+          rdme: openapi categories/utils/openapi.yml --key=${{ secrets.README_API_KEY }} --id=65bbb0310c15f7000fa0f837

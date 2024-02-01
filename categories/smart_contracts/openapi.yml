@@ -1,0 +1,225 @@
+openapi: 3.1.0
+info:
+  title: Smart Contracts
+  version: 3.18.3
+servers:
+- url: https://api.tatum.io
+paths:
+  /v3/gas-pump:
+    post:
+      $ref: categories/smart_contracts/paths/v3_gas-pump_post.yml
+  /v3/gas-pump/activate:
+    post:
+      $ref: categories/smart_contracts/paths/v3_gas-pump_activate_post.yml
+  /v3/gas-pump/address/{chain}/{txId}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_gas-pump_address_{chain}_{txId}_get.yml
+  /v3/gas-pump/activated/{chain}/{owner}/{index}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_gas-pump_activated_{chain}_{owner}_{index}_get.yml
+  /v3/blockchain/sc/custodial/transfer:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_sc_custodial_transfer_post.yml
+  /v3/blockchain/sc/custodial/transfer/batch:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_sc_custodial_transfer_batch_post.yml
+  /v3/blockchain/sc/custodial/approve:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_sc_custodial_approve_post.yml
+  /v3/blockchain/sc/custodial/batch:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_sc_custodial_batch_post.yml
+  /v3/blockchain/sc/custodial:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_sc_custodial_post.yml
+  /v3/blockchain/sc/custodial/{chain}/{hash}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_sc_custodial_{chain}_{hash}_get.yml
+  /v3/blockchain/marketplace/listing:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_post.yml
+    put:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_put.yml
+  /v3/blockchain/marketplace/listing/sell:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_sell_post.yml
+  /v3/blockchain/marketplace/listing/buy:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_buy_post.yml
+  /v3/blockchain/marketplace/listing/cancel:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_cancel_post.yml
+  /v3/blockchain/marketplace/listing/{chain}/{contractAddress}/{type}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_{chain}_{contractAddress}_{type}_get.yml
+  /v3/blockchain/marketplace/listing/{chain}/{contractAddress}/listing/{id}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_{chain}_{contractAddress}_listing_{id}_get.yml
+  /v3/blockchain/marketplace/listing/{chain}/{contractAddress}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_{chain}_{contractAddress}_get.yml
+  /v3/blockchain/marketplace/listing/{chain}/{contractAddress}/fee:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_{chain}_{contractAddress}_fee_get.yml
+  /v3/blockchain/marketplace/listing/{chain}/{contractAddress}/recipient:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_{chain}_{contractAddress}_recipient_get.yml
+  /v3/blockchain/marketplace/listing/recipient:
+    put:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_recipient_put.yml
+  /v3/blockchain/marketplace/listing/fee:
+    put:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_listing_fee_put.yml
+  /v3/blockchain/marketplace/withdraw/fee:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_withdraw_fee_post.yml
+  /v3/blockchain/marketplace/withdraw/treasury:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_marketplace_withdraw_treasury_post.yml
+  /v3/blockchain/auction:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_auction_post.yml
+  /v3/blockchain/auction/sell:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_auction_sell_post.yml
+  /v3/blockchain/auction/bid:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_auction_bid_post.yml
+  /v3/blockchain/auction/settle:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_auction_settle_post.yml
+  /v3/blockchain/auction/cancel:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_auction_cancel_post.yml
+  /v3/blockchain/auction/approve:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_auction_approve_post.yml
+  /v3/blockchain/auction/{chain}/{contractAddress}/{id}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_auction_{chain}_{contractAddress}_{id}_get.yml
+  /v3/blockchain/auction/{chain}/{contractAddress}/fee:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_auction_{chain}_{contractAddress}_fee_get.yml
+  /v3/blockchain/auction/{chain}/{contractAddress}/recipient:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_auction_{chain}_{contractAddress}_recipient_get.yml
+  /v3/blockchain/auction/recipient:
+    put:
+      $ref: categories/smart_contracts/paths/v3_blockchain_auction_recipient_put.yml
+  /v3/blockchain/auction/fee:
+    put:
+      $ref: categories/smart_contracts/paths/v3_blockchain_auction_fee_put.yml
+  /v3/multitoken/deploy:
+    post:
+      $ref: categories/smart_contracts/paths/v3_multitoken_deploy_post.yml
+  /v3/multitoken/mint:
+    post:
+      $ref: categories/smart_contracts/paths/v3_multitoken_mint_post.yml
+  /v3/multitoken/mint/batch:
+    post:
+      $ref: categories/smart_contracts/paths/v3_multitoken_mint_batch_post.yml
+  /v3/multitoken/burn:
+    post:
+      $ref: categories/smart_contracts/paths/v3_multitoken_burn_post.yml
+  /v3/multitoken/burn/batch:
+    post:
+      $ref: categories/smart_contracts/paths/v3_multitoken_burn_batch_post.yml
+  /v3/multitoken/transaction:
+    post:
+      $ref: categories/smart_contracts/paths/v3_multitoken_transaction_post.yml
+  /v3/multitoken/transaction/batch:
+    post:
+      $ref: categories/smart_contracts/paths/v3_multitoken_transaction_batch_post.yml
+  /v3/multitoken/mint/add:
+    post:
+      $ref: categories/smart_contracts/paths/v3_multitoken_mint_add_post.yml
+  /v3/multitoken/transaction/{chain}/{address}/{tokenAddress}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_multitoken_transaction_{chain}_{address}_{tokenAddress}_get.yml
+  /v3/multitoken/transaction/{chain}/{hash}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_multitoken_transaction_{chain}_{hash}_get.yml
+  /v3/multitoken/address/balance/{chain}/{address}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_multitoken_address_balance_{chain}_{address}_get.yml
+  /v3/multitoken/balance/{chain}/{contractAddress}/{address}/{tokenId}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_multitoken_balance_{chain}_{contractAddress}_{address}_{tokenId}_get.yml
+  /v3/multitoken/balance/batch/{chain}/{contractAddress}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_multitoken_balance_batch_{chain}_{contractAddress}_get.yml
+  /v3/multitoken/metadata/{chain}/{contractAddress}/{token}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_multitoken_metadata_{chain}_{contractAddress}_{token}_get.yml
+  /v3/multitoken/address/{chain}/{hash}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_multitoken_address_{chain}_{hash}_get.yml
+  /v3/blockchain/token/deploy:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_token_deploy_post.yml
+  /v3/blockchain/token/mint:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_token_mint_post.yml
+  /v3/blockchain/token/burn:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_token_burn_post.yml
+  /v3/blockchain/token/approve:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_token_approve_post.yml
+  /v3/blockchain/token/transaction:
+    post:
+      $ref: categories/smart_contracts/paths/v3_blockchain_token_transaction_post.yml
+  /v3/blockchain/token/transaction/{chain}/{address}/{tokenAddress}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_token_transaction_{chain}_{address}_{tokenAddress}_get.yml
+  /v3/blockchain/token/balance/{chain}/{contractAddress}/{address}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_token_balance_{chain}_{contractAddress}_{address}_get.yml
+  /v3/blockchain/token/address/{chain}/{address}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_blockchain_token_address_{chain}_{address}_get.yml
+  /v3/nft/deploy:
+    post:
+      $ref: categories/smart_contracts/paths/v3_nft_deploy_post.yml
+  /v3/nft/mint/add:
+    post:
+      $ref: categories/smart_contracts/paths/v3_nft_mint_add_post.yml
+  /v3/nft/mint:
+    post:
+      $ref: categories/smart_contracts/paths/v3_nft_mint_post.yml
+  /v3/nft/transaction:
+    post:
+      $ref: categories/smart_contracts/paths/v3_nft_transaction_post.yml
+  /v3/nft/mint/batch:
+    post:
+      $ref: categories/smart_contracts/paths/v3_nft_mint_batch_post.yml
+  /v3/nft/burn:
+    post:
+      $ref: categories/smart_contracts/paths/v3_nft_burn_post.yml
+  /v3/nft/verify:
+    post:
+      $ref: categories/smart_contracts/paths/v3_nft_verify_post.yml
+  /v3/nft/transaction/{chain}/{address}/{tokenAddress}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_nft_transaction_{chain}_{address}_{tokenAddress}_get.yml
+  /v3/nft/transaction/tokenId/{chain}/{tokenAddress}/{tokenId}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_nft_transaction_tokenId_{chain}_{tokenAddress}_{tokenId}_get.yml
+  /v3/nft/transaction/{chain}/{hash}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_nft_transaction_{chain}_{hash}_get.yml
+  /v3/nft/address/balance/{chain}/{address}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_nft_address_balance_{chain}_{address}_get.yml
+  /v3/nft/collection/{chain}/{address}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_nft_collection_{chain}_{address}_get.yml
+  /v3/nft/balance/{chain}/{contractAddress}/{address}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_nft_balance_{chain}_{contractAddress}_{address}_get.yml
+  /v3/nft/metadata/{chain}/{contractAddress}/{tokenId}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_nft_metadata_{chain}_{contractAddress}_{tokenId}_get.yml
+  /v3/nft/address/{chain}/{hash}:
+    get:
+      $ref: categories/smart_contracts/paths/v3_nft_address_{chain}_{hash}_get.yml

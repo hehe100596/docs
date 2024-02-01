@@ -1,0 +1,36 @@
+openapi: 3.1.0
+info:
+  title: Security
+  version: 3.18.3
+servers:
+- url: https://api.tatum.io
+paths:
+  /v3/kms/pending/{chain}:
+    get:
+      $ref: categories/security/paths/v3_kms_pending_{chain}_get.yml
+    post:
+      $ref: categories/security/paths/v3_kms_pending_{chain}_post.yml
+  /v3/kms/{id}/{txId}:
+    put:
+      $ref: categories/security/paths/v3_kms_{id}_{txId}_put.yml
+  /v3/kms/{id}:
+    get:
+      $ref: categories/security/paths/v3_kms_{id}_get.yml
+    delete:
+      $ref: categories/security/paths/v3_kms_{id}_delete.yml
+  /v3/security/address/{address}:
+    get:
+      $ref: categories/security/paths/v3_security_address_{address}_get.yml
+  /v3/custodial/wallet:
+    post:
+      $ref: categories/security/paths/v3_custodial_wallet_post.yml
+    get:
+      $ref: categories/security/paths/v3_custodial_wallet_get.yml
+  /v3/custodial/wallet/{id}:
+    get:
+      $ref: categories/security/paths/v3_custodial_wallet_{id}_get.yml
+    delete:
+      $ref: categories/security/paths/v3_custodial_wallet_{id}_delete.yml
+  /v3/custodial/transaction:
+    post:
+      $ref: categories/security/paths/v3_custodial_transaction_post.yml

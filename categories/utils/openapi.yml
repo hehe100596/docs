@@ -1,0 +1,30 @@
+openapi: 3.1.0
+info:
+  title: Utils
+  version: 3.18.3
+servers:
+- url: https://api.tatum.io
+paths:
+  /v3/blockchain/sc/address/{chain}/{hash}:
+    get:
+      $ref: categories/utils/paths/v3_blockchain_sc_address_{chain}_{hash}_get.yml
+  /v3/blockchain/auction/time/{chain}/{date}:
+    get:
+      $ref: categories/utils/paths/v3_blockchain_auction_time_{chain}_{date}_get.yml
+  /v3/tatum/usage:
+    get:
+      $ref: categories/utils/paths/v3_tatum_usage_get.yml
+  /v3/tatum/rate/{currency}:
+    get:
+      $ref: categories/utils/paths/v3_tatum_rate_{currency}_get.yml
+  /v3/tatum/rate:
+    post:
+      $ref: categories/utils/paths/v3_tatum_rate_post.yml
+  /v3/tatum/version:
+    get:
+      $ref: categories/utils/paths/v3_tatum_version_get.yml
+  /v3/tatum/freeze:
+    put:
+      $ref: categories/utils/paths/v3_tatum_freeze_put.yml
+    delete:
+      $ref: categories/utils/paths/v3_tatum_freeze_delete.yml

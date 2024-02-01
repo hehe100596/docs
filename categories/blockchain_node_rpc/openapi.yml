@@ -1,0 +1,14 @@
+openapi: 3.1.0
+info:
+  title: Blockchain Node RPC
+  version: 3.18.3
+servers:
+- url: https://api.tatum.io
+paths:
+  /v3/blockchain/node/{chain}/{xApiKey}/{rpcPath}:
+    post:
+      $ref: categories/blockchain_node_rpc/paths/v3_blockchain_node_{chain}_{xApiKey}_{rpcPath}_post.yml
+    put:
+      $ref: categories/blockchain_node_rpc/paths/v3_blockchain_node_{chain}_{xApiKey}_{rpcPath}_put.yml
+    get:
+      $ref: categories/blockchain_node_rpc/paths/v3_blockchain_node_{chain}_{xApiKey}_{rpcPath}_get.yml
