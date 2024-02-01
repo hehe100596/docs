@@ -2,6 +2,15 @@ openapi: 3.1.0
 info:
   title: Utils
   version: 3.18.3
+tags:
+- description: '<p>The utility APIs help you use some native blockchain features such
+    as getting the address of a smart contract or estimating the block number.</p>
+
+    <p>Each utility API supports its own set of the blockchains. The list of the supported
+    blockchains is provided in the API description further in this section.</p>
+
+    '
+  name: Blockchain utils
 servers:
 - url: https://api.tatum.io
 paths:
